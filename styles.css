@@ -41,6 +41,34 @@ section#menu {
     color: #555;
 }
 
+.item-limit-control {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.item-limit-control input {
+    padding: 0.5em;
+    font-size: 1rem;
+    width: 150px;
+    border: none;
+    border-bottom: 1px solid #B75D69;
+    border-radius: 5px;
+}
+
+.item-limit-control button {
+    padding: 0.75em 1em;
+    margin-left: 1em;
+    background-color: #7c1b26;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-limit-control button:hover {
+    background-color: #B75D69;
+}
+
 .menu-categories {
     text-align: center;
     margin-bottom: 2em;

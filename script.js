@@ -46,6 +46,17 @@ function displayProducts(products) {
     });
 }
 
+document.getElementById('apply-limit').addEventListener('click', () => {
+    const limit = document.getElementById('item-limit').value || 10; 
+    fetch(`https://dummyjson.com/products?limit=${limit}`)
+        .then(res => res.json())
+        .then(data => {
+            allProducts = data.products;
+            displayProducts(allProducts); 
+        })
+        .catch(error => console.error('Error fetching products:', error));
+});
+
 // filtering
 const categoryButtons = document.querySelectorAll('.category-btn');
 categoryButtons.forEach(button => {

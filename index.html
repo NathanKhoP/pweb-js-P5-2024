@@ -13,7 +13,14 @@
         <div class="menu-header">
             <h1>Our Catalogue</h1>
             <p>Explore the finest dummy products here! (Totally not fake at all :3)</p>
+        
+            <!-- input - limiting items -->
+            <div class="item-limit-control">
+                <input type="number" id="item-limit" placeholder="Number of items" min="1" max="100" />
+                <button id="apply-limit">Apply Limit</button>
+            </div>
         </div>
+        
 
         <div class="menu-categories">
             <button class="category-btn active" data-category="all">All</button>
