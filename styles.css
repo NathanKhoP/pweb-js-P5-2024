@@ -150,6 +150,23 @@ section#menu {
     font-size: 1.1rem;
 }
 
+.cart-btn {
+    background-color: #B75D69;
+    color: white;
+    border: none;
+    padding: 0.3em 0.7em; 
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0.5em;
+    min-width: 100px; 
+    max-width: fit-content; 
+    font-size: 14px; 
+}
+
+
 @media (max-width: 768px) {
     .menu-header h1 {
         font-size: 2.5rem;
