@@ -261,7 +261,7 @@ section#menu {
     border-radius: 5px;
 }
 
-#close-cart-btn {
+#close-cart-btn, #checkout-btn {
     background-color: #B75D69;
     color: white;
     border: none;
