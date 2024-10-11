@@ -11,12 +11,21 @@ function fetchProductsByCategory(category, limit) {
     }
 
     fetch(url)
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
         .then(data => {
             const products = data.products;
             displayProducts(products);
+            displayErrorMessage('');  
         })
-        .catch(error => console.error('Error fetching products:', error));
+        .catch(error => {
+            displayErrorMessage('Error fetching products. Please try again later.');
+            console.error('Error fetching products:', error);
+        });
 }
 
 function displayProducts(products) {
@@ -68,6 +77,16 @@ function displayProducts(products) {
 
         menuItemsContainer.appendChild(menuItem);
     });
+}
+
+function displayErrorMessage(message) {
+    const errorMessage = document.getElementById('error-message');
+    if (message) {
+        errorMessage.textContent = message;
+        errorMessage.style.display = 'block';
+    } else {
+        errorMessage.style.display = 'none';
+    }
 }
 
 // filtering
