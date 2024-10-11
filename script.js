@@ -23,7 +23,7 @@ function fetchProductsByCategory(category, limit) {
             displayErrorMessage('');  
         })
         .catch(error => {
-            displayErrorMessage('Error fetching products. Please try again later.');
+            displayErrorMessage('Error fetching products, Please check your internet connection!');
             console.error('Error fetching products:', error);
         });
 }
