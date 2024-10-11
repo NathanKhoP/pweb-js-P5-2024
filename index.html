@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@200;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="menu">
+        <div class="menu-header">
+            <h1>Our Catalogue</h1>
+            <p>Explore the finest dummy products here! (Totally not fake at all :3)</p>
+        
+            <!-- input - limiting items -->
+            <div class="item-limit-control">
+                <input type="number" id="item-limit" placeholder="Number of items" min="1" max="100" />
+                <button id="apply-limit">Apply Limit</button>
+            </div>
+        </div>
+
+        <div class="error-message" id="error-message" style="display:none;"></div>
+        
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="beauty">Beauty</button>
+            <button class="category-btn" data-category="fragrances">Fragrances</button>
+            <button class="category-btn" data-category="furniture">Furniture</button>
+            <button class="category-btn" data-category="groceries">Groceries</button>
+            <button class="category-btn" data-category="home-decoration">Home Decor</button>
+            <button class="category-btn" data-category="kitchen-accessories">Kitchen Accessories</button>
+            <button class="category-btn" data-category="laptops">Laptops</button>
+            <button class="category-btn" data-category="smartphones">Smartphones</button>
+        </div>
+
+        <div class="menu-items" id="menu-items"></div>
+
+    </section>
+
+    <button id="view-cart-btn">
+        <img src="./assets/bag.svg" alt="cart" height="40px" width="40px"/>
+    </button>
+    <div id="cart-modal" class="cart-modal" style="display:none;">
+        <div id="cart-items"></div>
+        <button id="close-cart-btn">Close Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
