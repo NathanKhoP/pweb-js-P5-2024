@@ -286,13 +286,3 @@ section#menu {
     cursor: pointer;
     border-radius: 5px;
 }
-/* existing styles */
-.error-message {
-    background-color: #ffcccc;
-    color: #990000;
-    padding: 1em;
-    text-align: center;
-    border: 1px solid #990000;
-    border-radius: 5px;
-    margin: 1em 0;
-}
